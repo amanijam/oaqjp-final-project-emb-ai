@@ -21,11 +21,6 @@ def sent_analyzer():
     if res['dominant_emotion'] is None:
         return "Invalid text! Please try again!"
 
-    # return "For the given statement, the system response is 'anger': {}, \
-    #         'disgust': {}, 'fear': {}, 'joy': {} and 'sadness': {}. The \
-    #         dominant emotion is {}.".format(str(res['anger']), str(res['disgust']), \
-    #         str(res['fear']), str(res['joy']), str(res['sadness']), \
-    #         res['dominant_emotion'])
     output = (
         f"For the given statement, the system response is 'anger': "
         f"{str(res['anger'])}, 'disgust': {str(res['disgust'])}, 'fear': "
@@ -43,4 +38,4 @@ def render_index_page():
     return render_template("index.html")
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
+    app.run(host="0.0.0.0", port=5000)
